@@ -1,8 +1,8 @@
-import React from 'react'
-
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} My App · Built with React &amp; Vite</p>
+    </footer>
   )
 }
 

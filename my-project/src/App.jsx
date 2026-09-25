@@ -1,16 +1,24 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Skills from './pages/Skills.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
- <>
-  <h1>Hello world !</h1>
- </>
+    <div className="app">
+      <Navbar />
+      <main className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   )
 }
 
